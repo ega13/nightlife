@@ -1,0 +1,109 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: #6b6169;
+}
+
+.navbar-fixed-top{
+	margin-bottom: 0px;
+}
+
+a, a:hover, a:focus{
+	color: #fff;
+	text-decoration: none;
+}
+.btn-primary{
+	border: 0px;
+	border-radius: 3px;
+	margin-top: 2px;
+}
+
+.btn-danger{
+	padding: 10px 12px;
+	border: 0px;
+	border-radius: 3px;
+	margin-top: 3px;
+}
+
+.btn-danger a{
+	padding: 10px 12px;
+}
+
+.yelp{
+	color: #666;
+	background-color: #6b6169;
+	padding: 50px 100px 100px 135px;
+}
+
+.yelp a, .yelp a:hover, .yelp a:focus{
+	color: #6b6169;
+	text-decoration: none;
+}
+
+.yelp h3{
+	font-size: 17px;
+}
+
+.yelp .busi{
+	width: 220px;
+	float: left;
+	margin: 20px;
+	background-color: #fff;
+	padding: 20px 20px 10px 20px;
+	border-radius: 5px;
+}
+
+.bus-img{
+	text-align: center;
+	padding-top: 15px;
+}
+
+
+.going p{
+	color: #2980b9;
+}
+
+.going a, .going a:hover, .going a:focus{
+	display: inline-block;
+	color: #fff;
+	background-color: #6b6169;
+	padding: 0px 15px;
+	border-radius: 2px;
+}
+
+.going{
+	margin-top: 10px;
+}
+.rating .review{
+	margin-left: 15px;
+}
+.going span{
+	border-radius: 2px;
+	border: 1px solid #6b6169;
+	color: #6b6169;
+	padding: 1px 15px;
+	margin-left: 20px;
+	position: relative;
+	top: 1px;
+}
+
+.search{
+	padding: 20px 200px 0px 200px;
+}
+
+.search .btn{
+	display: inline-block;
+	color: #fff;
+	height: 40px;
+	margin-left: 10px;
+	background-color: #6666ff;
+	border: 1px solid black;
+}
+.search input{
+	width: 700px;
+	float: left;
+	height: 40px;
+}

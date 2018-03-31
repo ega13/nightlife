@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%=title%></title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/font-awesome.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	 <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Nightlife Coordination</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <%if(userid){%>
+              <button class="btn-danger"><a href="/auth/logout">Log out <i class="fa fa-sign-out" aria-hidden="true"></i><span class="sr-only"></span></a></button>
+            <%}else{%>
+              <button class="btn-primary"><a href="/auth/facebook" class="btn btn-primary">Log in <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i> <span class="sr-only"></span></a></button>
+            <%}%>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="search">
+      <form action="" method="POST" class="form form-horizonal">
+        <input type="text" name="location" class="form-control" id="location">
+        <button type="submit" class="btn btn-search">Search</button>
+        <div style="clear:both;"></div>
+      </form>
+    </div>
+    <div class="yelp">
+      <div class="bussiness">
+        <%var count = 0%>
+        <%for(var i = 0; i < bus.length; i++){%>
+            <%count++%>
+            <div class="busi">
+              <div class="bus-img thumbnail">
+                <img src="<%=images[i]%>" alt="<%=bus[i]%>" title="<%=bus[i]%>"/>
+                <h3 class="bus-name caption text-center"><a href="<%=urls[i]%>" target="_blank"><%=bus[i]%></a></h3>
+              </div>
+              <div class="address">
+                <p><%=locs[i]%></p>
+                <p>Phone: <%=phones[i]%></p>
+              </div>
+              <div class="rating">
+                <span class="rat"><img src="<%=ratings[i]%>" alt="rating" alt="rating"></span>
+                <span class="review"><%=reviews[i]%></span>
+              </div>
+              <%if(userid){%>
+                <div class="going">
+                  <p><a href="#" title="going" alt="going"><i class="fa fa-motorcycle" aria-hidden="true"></i></a> <span>100</span></p>
+                </div>
+              <%}else{%>
+                <div class="going">
+                  <p><i class="fa fa-motorcycle" aria-hidden="true"></i></p>
+                </div>
+              <%}%>
+            </div>
+            <%if(count % 4 === 0){%>
+              <div style="clear:both;"></div>
+            <%}%>
+        <%}%>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+	<div class="container">
+		
+	</div>
+	<script src="/js/jquery-2.2.3.js"></script>
+	<script src="/js/bootstrap.js"></script>
+</body>
+</html>

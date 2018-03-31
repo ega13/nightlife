@@ -1,0 +1,28 @@
+{
+  "name": "nightlife",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "express-validator": "^2.20.10",
+    "merge": "^1.2.0",
+    "mongoose": "^4.6.2",
+    "node-yelp": "0.0.3",
+    "node-yelp-api": "^1.1.0",
+    "nodemon": "^1.11.0",
+    "nonce": "^1.0.4",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1"
+  }
+}
